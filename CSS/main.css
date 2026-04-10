@@ -1,0 +1,285 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion {
+    transition: none !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --red: hsl(1, 90%, 64%);
+  --blue-950: hsl(219, 85%, 26%);
+  --blue-100: hsl(211, 68%, 94%);
+  --navy-50: hsl(210, 60%, 98%);
+  --navy-100: hsl(205, 33%, 90%);
+  --navy-950: hsl(224, 21%, 14%);
+  --gray-500: hsl(219, 14%, 63%);
+  --gray-600: hsl(219, 12%, 42%);
+  --transition: 0.3s;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
+}
+
+@media (min-width: 900px) {
+  body {
+    background-color: var(--navy-50);
+    align-items: center;
+  }
+}
+
+main {
+  flex: 1;
+  padding: 3rem 1.6rem;
+  background-color: white;
+}
+
+@media (min-width: 700px) {
+  main {
+    padding: 3rem 3.2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    max-width: 75rem;
+    margin: 6rem 0;
+    border-radius: 1.5rem;
+  }
+}
+
+header {
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 700px) {
+  header {
+    margin-bottom: 3.2rem;
+  }
+}
+
+header h1 {
+  font-size: 2rem;
+  gap: 0.8rem;
+}
+
+@media (min-width: 700px) {
+  header h1 {
+    font-size: 2.4rem;
+    gap: 1.6rem;
+  }
+}
+
+header h1 .notify-count {
+  width: 3.2rem;
+  height: 2.5rem;
+  background-color: var(--blue-950);
+  color: white;
+  border-radius: 0.6rem;
+  font-size: initial;
+}
+
+header .mark-btn {
+  background-color: transparent;
+  color: var(--gray-600);
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: var(--transition) color;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 700px) {
+  header .mark-btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 900px) {
+  header .mark-btn:hover {
+    color: var(--blue-950);
+  }
+}
+
+ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+ul li:last-of-type .notify-msg {
+  color: var(--blue-950);
+}
+
+ul li img {
+  width: 3.9rem;
+  height: 3.9rem;
+}
+
+@media (min-width: 700px) {
+  ul li img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+ul li img:first-of-type {
+  border-radius: 50%;
+}
+
+@media (max-width: 699px) {
+  ul li .notify-info {
+    font-size: 1.4rem;
+  }
+}
+
+ul li .notify-info > p {
+  margin-bottom: 0.8rem;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+ul li .notify-info > p :where(.user-name, .notify-msg) {
+  font-weight: bold;
+  transition: var(--transition) color;
+  cursor: pointer;
+}
+
+ul li .notify-info .user-name {
+  color: black;
+}
+
+@media (min-width: 900px) {
+  ul li .notify-info .user-name:hover {
+    color: var(--blue-950);
+  }
+}
+
+@media (min-width: 900px) {
+  ul li .notify-info .notify-msg:hover {
+    color: var(--blue-950);
+  }
+}
+
+ul li .notify-info .time {
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+ul.unread {
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 700px) {
+  ul.unread {
+    margin-bottom: 2.6rem;
+  }
+}
+
+ul.unread li {
+  padding: 0.8rem 1.6rem;
+}
+
+@media (min-width: 700px) {
+  ul.unread li {
+    padding: 1.6rem 2.4rem;
+  }
+}
+
+ul.unread li:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+
+ul.unread .unread-notify {
+  background-color: var(--navy-50);
+  border-radius: 0.8rem;
+}
+
+ul.unread li .notify-info > p span {
+  margin-inline-end: 0.6rem;
+}
+
+ul.unread .unread-notify .notify-info > p::after {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background-color: var(--red);
+}
+
+ul.read {
+  padding: 0 1.6rem;
+}
+
+@media (min-width: 700px) {
+  ul.read {
+    padding: 0 2.4rem;
+  }
+}
+
+ul.read li:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+ul.read li .notify-info > p span:not(.notify-msg) {
+  margin-inline-end: 0.6rem;
+}
+
+ul li.rizky-hasanuddin .private-msg {
+  margin-top: 0.8rem;
+  padding: 1.6rem;
+  color: var(--gray-600);
+  border: 1px solid var(--navy-100);
+  border-radius: 0.6rem;
+  line-height: 1.25;
+  transition: var(--transition) background-color;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  ul li.rizky-hasanuddin .private-msg:hover {
+    background-color: var(--blue-100);
+  }
+}
+
+ul.read li.kimberly-smith img:last-of-type {
+  border-radius: 0.7rem;
+  margin-left: auto;
+}
