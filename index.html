@@ -15,107 +15,129 @@
   <body class="d-flex jc-center">
     <main>
       <header class="d-flex jc-between ai-center">
-        <h1 class="d-flex ai-center">
-          Notifications <span class="notify-count d-flex jc-center ai-center">3</span>
+        <h1 class="d-flex ai-center" aria-live="polite" aria-atomic="true">
+          <span class="notify-count d-flex jc-center ai-center">3</span>
+          Notifications
         </h1>
         <button class="mark-btn motion" type="button">Mark all as read</button>
       </header>
+      <h2 class="visually-hidden">unread notifications</h2>
       <ul class="unread">
         <li class="mark-webber unread-notify">
-          <img src="assets/images/avatar-mark-webber.webp" alt="mark's profile picture" />
-          <div class="notify-info">
-            <p>
-              <span class="user-name motion">Mark Webber</span>
-              <span> reacted to your recent post </span>
-              <span class="notify-msg motion">My first tournament today!</span>
-            </p>
-            <span class="time">1m ago</span>
-          </div>
+          <article>
+            <img src="assets/images/avatar-mark-webber.webp" alt="mark's profile picture" />
+            <div class="notify-info">
+              <p>
+                <span class="visually-hidden">unread notify</span>
+                <span class="user-name motion">Mark Webber</span>
+                <span> reacted to your recent post </span>
+                <span class="notify-msg motion">My first tournament today!</span>
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">1m ago</span>
+            </div>
+          </article>
         </li>
         <li class="angela-gray unread-notify">
-          <img src="assets/images/avatar-angela-gray.webp" alt="angela's profile picture" />
-          <div class="notify-info">
-            <p>
-              <span class="user-name motion">Angela Gray</span>
-              <span> followed you </span>
-            </p>
-            <span class="time">5m ago</span>
-          </div>
+          <article>
+            <img src="assets/images/avatar-angela-gray.webp" alt="angela's profile picture" />
+            <div class="notify-info">
+              <p>
+                <span class="visually-hidden">unread notify</span>
+                <span class="user-name motion">Angela Gray</span>
+                <span> followed you </span>
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">5m ago</span>
+            </div>
+          </article>
         </li>
         <li class="jacob-thompson unread-notify">
-          <img src="assets/images/avatar-jacob-thompson.webp" alt="jacob's profile picture" />
-          <div class="notify-info">
-            <p>
-              <span class="user-name motion">Jacob Thompson</span>
-              <span> has joined your group </span>
-              <span class="notify-msg motion">Chess Club</span>
-            </p>
-            <span class="time">1 day ago</span>
-          </div>
+          <article>
+            <img
+              src="assets/images/avatar-jacob-thompson.webp"
+              alt="jacob's profile picture"
+            />
+            <div class="notify-info">
+              <p>
+                <span class="visually-hidden">unread notify</span>
+                <span class="user-name motion">Jacob Thompson</span>
+                <span> has joined your group </span>
+                <span class="notify-msg motion">Chess Club</span>
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">1 day ago</span>
+            </div>
+          </article>
         </li>
       </ul>
-
+      <h2 class="visually-hidden">read notifications</h2>
       <ul class="read">
         <li class="rizky-hasanuddin">
-          <img
-            src="assets/images/avatar-rizky-hasanuddin.webp"
-            alt="rizky's profile picture"
-          />
-          <div class="notify-info">
-            <p class="notify">
-              <span class="user-name motion">Rizky Hasanuddin</span>
-              sent you a private message
-            </p>
-            <span class="time">5 days ago</span>
-            <p class="private-msg motion">
-              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks
-              now and I'm already having lots of fun and improving my game.
-            </p>
-          </div>
+          <article>
+            <img
+              src="assets/images/avatar-rizky-hasanuddin.webp"
+              alt="rizky's profile picture"
+            />
+            <div class="notify-info">
+              <p class="notify">
+                <span class="user-name motion">Rizky Hasanuddin</span>
+                sent you a private message
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">5 days ago</span>
+              <p class="private-msg motion">
+                Hello, thanks for setting up the Chess Club. I've been a member for a few weeks
+                now and I'm already having lots of fun and improving my game.
+              </p>
+            </div>
+          </article>
         </li>
         <li class="kimberly-smith">
-          <img
-            src="assets/images/avatar-kimberly-smith.webp"
-            alt="kimberly's profile picture"
-          />
-          <div class="notify-info">
-            <p class="notify">
-              <span class="user-name motion">Kimberly Smith</span>
-              commented on your picture
-            </p>
-            <span class="time">1 week ago</span>
-          </div>
-          <img
-            src="assets/images/image-chess.webp"
-            alt="picture that kimberly interacted with"
-          />
+          <article>
+            <img
+              src="assets/images/avatar-kimberly-smith.webp"
+              alt="kimberly's profile picture"
+            />
+            <div class="notify-info">
+              <p class="notify">
+                <span class="user-name motion">Kimberly Smith</span>
+                commented on your picture
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">1 week ago</span>
+            </div>
+            <img
+              src="assets/images/image-chess.webp"
+              alt="picture that kimberly interacted with"
+            />
+          </article>
         </li>
         <li class="nathan-peterson">
-          <img
-            src="assets/images/avatar-nathan-peterson.webp"
-            alt="nathan's profile picture"
-          />
-          <div class="notify-info">
-            <p class="notify">
-              <span class="user-name motion">Nathan Peterson</span>
-              <span> reacted to your recent post </span>
-              <span class="notify-msg motion"
-                >5 end-game strategies to increase your win rate</span
-              >
-            </p>
-            <span class="time">2 weeks ago</span>
-          </div>
+          <article>
+            <img
+              src="assets/images/avatar-nathan-peterson.webp"
+              alt="nathan's profile picture"
+            />
+            <div class="notify-info">
+              <p class="notify">
+                <span class="user-name motion">Nathan Peterson</span>
+                <span> reacted to your recent post </span>
+                <span class="notify-msg motion"
+                  >5 end-game strategies to increase your win rate</span
+                >
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">2 weeks ago</span>
+            </div>
+          </article>
         </li>
         <li class="anna-kim">
-          <img src="assets/images/avatar-anna-kim.webp" alt="anna's profile picture" />
-          <div class="notify-info">
-            <p class="notify">
-              <span class="user-name motion">Anna Kim</span>
-              <span> left the group </span>
-              <span class="notify-msg motion">Chess Club</span>
-            </p>
-            <span class="time">2 weeks ago</span>
-          </div>
+          <article>
+            <img src="assets/images/avatar-anna-kim.webp" alt="anna's profile picture" />
+            <div class="notify-info">
+              <p class="notify">
+                <span class="user-name motion">Anna Kim</span>
+                <span> left the group </span>
+                <span class="notify-msg motion">Chess Club</span>
+              </p>
+              <span datetime="2026-04-28T19:50:00+02:00" class="time">2 weeks ago</span>
+            </div>
+          </article>
         </li>
       </ul>
     </main>
